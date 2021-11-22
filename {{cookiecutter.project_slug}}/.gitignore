@@ -1,0 +1,10 @@
+# built documentation
+docs/_build
+docs/_autosummary
+
+# python binaries
+*/__pycache__
+# egg info created when installed for dev purposes: pip install -e .
+*.egg-info/
+
+.pytest_cache

@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build doc",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": ["-m", "sphinx","-b","html", "docs", "docs/_build", "-a"],
+            "type": "shell",
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "build"     
+        },
+        {
+            "label": "open docs", 
+            "command": "start ${workspaceFolder}\\docs\\_build\\index.html",
+            "type": "shell",
+            "presentation": {
+                "reveal": "always"
+            },
+            "dependsOn":["build doc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+  }

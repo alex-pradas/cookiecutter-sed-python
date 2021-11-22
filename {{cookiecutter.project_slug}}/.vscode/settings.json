@@ -1,0 +1,10 @@
+{
+    "restructuredtext.confPath": "${workspaceFolder}\\docs",
+    "python.defaultInterpreterPath": "C:\\tools\\pyenvs\\dev\\Scripts\\python.exe",
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "restructuredtext.languageServer.disabled": true
+}
