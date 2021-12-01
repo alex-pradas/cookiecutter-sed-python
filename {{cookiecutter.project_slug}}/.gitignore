@@ -8,3 +8,6 @@ docs/_autosummary
 *.egg-info/
 
 .pytest_cache
+#coverage files
+.coverage
+cov.xml

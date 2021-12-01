@@ -4,25 +4,48 @@
         {
             "label": "build doc",
             "command": "${config:python.defaultInterpreterPath}",
-            "args": ["-m", "sphinx","-b","html", "docs", "docs/_build", "-a"],
+            "args": [
+                "-m",
+                "sphinx",
+                "-b",
+                "html",
+                "docs",
+                "docs/_build",
+                "-a"
+            ],
             "type": "shell",
             "presentation": {
                 "reveal": "always"
             },
-            "group": "build"     
+            "group": "build"
         },
         {
-            "label": "open docs", 
+            "label": "open docs",
             "command": "start ${workspaceFolder}\\docs\\_build\\index.html",
             "type": "shell",
             "presentation": {
                 "reveal": "always"
             },
-            "dependsOn":["build doc"],
+            "dependsOn": [
+                "build doc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "coverage run",
+            "command": "${config:python.defaultInterpreterPath}",
+            "args": [
+                "-m",
+                "pytest",
+                "--cov={{cookiecutter.project_slug}}",
+                "--cov-report",
+                "xml:cov.xml"
+            ],
+            "type": "shell",
+            "problemMatcher": []
         }
     ]
   }
