@@ -1,5 +1,5 @@
 import pytest
-from sedlabdemo import hello
+from {{cookiecutter.project_slug}} import hello
 
 def test_sum():
     """provide more information here if required. For example, this test the sum"""
